@@ -329,7 +329,7 @@ export const OpenClawSchema = z
     browser: z
       .object({
         enabled: z.boolean().optional(),
-        evaluateEnabled: z.boolean().optional(),
+        evaluateEnabled: z.boolean().default(false),
         cdpUrl: z.string().optional(),
         remoteCdpTimeoutMs: z.number().int().nonnegative().optional(),
         remoteCdpHandshakeTimeoutMs: z.number().int().nonnegative().optional(),
